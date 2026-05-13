@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корень — питомник декоративных растений</title>
+    <meta name="description" content="Корень — питомник декоративных растений: каталог многолетников, кустарников, хвойных и луковичных. Подбор растений по сезону, климату и освещению.">
+
+    <!-- Шрифты подключены прямо в странице. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Общая шапка сайта. -->
+<header class="header">
+    <div class="container">
+
+        <div class="header__top">
+            <a href="index.html" class="header__logo" aria-label="На главную">КОРЕНЬ</a>
+
+            <label class="header__search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" width="18" height="18">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="m21 21-4.3-4.3" stroke-linecap="round"/>
+                </svg>
+                <input type="search" placeholder="Поиск растений, статей, инструментов…" aria-label="Поиск по сайту">
+            </label>
+
+            <div class="header__actions">
+                <a href="#" class="icon-btn" aria-label="Личный кабинет">
+                    <img src="img/icons/account.svg" alt="" aria-hidden="true">
+                </a>
+                <a href="#" class="icon-btn" aria-label="Избранное">
+                    <img src="img/icons/favorites.svg" alt="" aria-hidden="true">
+                </a>
+                <a href="#" class="icon-btn" aria-label="Корзина">
+                    <img src="img/icons/cart.svg" alt="" aria-hidden="true">
+                </a>
+            </div>
+        </div>
+
+        <nav class="header__nav" aria-label="Главное меню">
+            <a href="plants.html">Растения</a>
+            <a href="#">Конструктор</a>
+            <a href="#">Инструменты</a>
+            <a href="#">Раздел знаний</a>
+            <a href="#">Команда Корня</a>
+            <a href="#">Доставка и оплата</a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- Главный статичный баннер. -->
+<section class="hero" aria-label="Главный экран">
+    <div class="hero__image" style="background-image:url('img/hero/hero.jpg');"></div>
+
+    <div class="hero__content">
+        <h1 class="hero__title">Сад начинается <em>здесь</em></h1>
+        <a href="#bloom" class="hero__btn">
+            К растениям
+            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </a>
+    </div>
+</section>
+
+<!-- Карточки сюда рендерит JS. -->
+<section class="section bloom-now" id="bloom">
+    <div class="container">
+        <h2 class="section__title section__title--center"><span>ЦВЕТЕТ СЕЙЧАС</span></h2>
+        <div class="cards" id="bloomNow"></div>
+    </div>
+</section>
+
+<!-- Промо-блок конструктора. -->
+<section class="section section--compact">
+    <div class="container">
+        <h2 class="section__title section__title--center"><span>СОБЕРИ СВОЮ КЛУМБУ ЗА НЕСКОЛЬКО МИНУТ</span></h2>
+
+        <div class="constructor">
+            <img class="constructor__bg" src="img/ideas/constructor-illustration.png" alt="">
+
+            <div class="constructor__overlay">
+                <a href="#" class="constructor__btn">
+                    В конструктор
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                        <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <p class="constructor__desc">Подберите растения по сезону, цвету и высоте</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Сетка идей собрана вручную в HTML. -->
+<section class="section ideas">
+    <div class="container">
+        <h2 class="section__title section__title--center"><span>СКУЧАЕТЕ ПО ОЖИВЛЕННОМУ САДУ?<br>Скоро он вновь наполнится запахами и красками, а это значит — пора планировать сезон.</span></h2>
+
+        <div class="ideas__grid">
+            <a href="#" class="ideas__item">
+                <img src="img/ideas/hellebore.jpg" alt="Морозник">
+            </a>
+            <a href="#" class="ideas__item">
+                <img src="img/ideas/bergenia.jpg" alt="Бадан">
+            </a>
+
+            <a href="#" class="ideas__item ideas__item--tall">
+                <img src="img/ideas/snowdrops.jpg" alt="Подснежники в корзине">
+            </a>
+
+            <a href="#" class="ideas__item">
+                <img src="img/ideas/dahlia-dark.jpg" alt="Тёмные георгины">
+            </a>
+            <a href="#" class="ideas__item">
+                <img src="img/ideas/astilbe.jpg" alt="Астильба">
+            </a>
+
+            <a href="#" class="ideas__item">
+                <img src="img/ideas/pansies.jpg" alt="Анютины глазки">
+            </a>
+            <a href="#" class="ideas__item">
+                <img src="img/ideas/dahlia-orange.jpg" alt="Георгины оранжевые">
+            </a>
+            <a href="#" class="ideas__item">
+                <img src="img/ideas/hollyhocks.jpg" alt="Шток-розы">
+            </a>
+            <a href="#" class="ideas__item">
+                <img src="img/ideas/foxglove.jpg" alt="Наперстянка">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Лента садов рендерится из JS. -->
+<section class="section gardens">
+    <div class="container">
+        <h2 class="section__title section__title--center"><span>САДЫ НАШИХ ПОЛЬЗОВАТЕЛЕЙ</span></h2>
+        <div class="gardens__strip" id="gardensList"></div>
+    </div>
+</section>
+
+<!-- Статичный блок о процессе работы. -->
+<section class="section how">
+    <div class="container">
+        <h2 class="section__title section__title--center"><span>КАК МЫ РАБОТАЕМ</span></h2>
+
+        <div class="how__list">
+            <article class="how__item">
+                <div class="how__icon">
+                    <img src="img/icons/how-nursery.svg" alt="">
+                </div>
+                <p class="how__text">Выращиваем посадочный материал в собственном питомнике, что гарантирует соответствие климату</p>
+            </article>
+
+            <article class="how__item">
+                <div class="how__icon">
+                    <img src="img/icons/how-experts.svg" alt="">
+                </div>
+                <p class="how__text">Дендрологи и биологи изучают растения, совершенствуя рекомендации по уходу и пишут об этом статьи</p>
+            </article>
+
+            <article class="how__item">
+                <div class="how__icon">
+                    <img src="img/icons/how-design.svg" alt="">
+                </div>
+                <p class="how__text">Дизайнеры подбирают сочетания, которые держатся весь сезон</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Короткий блок о питомнике. -->
+<section class="about">
+    <div class="container">
+        <p class="about__text">Корень — питомник, созданный командой из биолога, дендролога, дизайнера и садовода.</p>
+        <p class="about__text">Собственная база растений формируется в ходе экспедиций — ежегодно сотрудники выезжают в разные климатические зоны, отбирают устойчивые декоративные формы.</p>
+        <p class="about__text">Сегодня Корень — это несколько тысяч растений и собственная селекция.</p>
+    </div>
+</section>
+
+<!-- Общий подвал. -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__cols">
+            <div class="footer__col">
+                <div class="footer__col-title">К прочтению:</div>
+                <ul>
+                    <li><a href="#">Уход за растениями</a></li>
+                    <li><a href="#">Календарь обработок</a></li>
+                    <li><a href="#">Все о почвах</a></li>
+                    <li><a href="#">Энциклопедия вредителей</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <div class="footer__col-title">Инфо:</div>
+                <ul>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <div class="footer__col-title">Садовый бэкстейдж:</div>
+                <ul class="footer__social">
+                    <li><a href="#"><img class="footer__social-icon" src="img/icons/social-pinterest.svg" alt="">Pinterest</a></li>
+                    <li><a href="#"><img class="footer__social-icon" src="img/icons/social-telegram.svg" alt="">Telegram</a></li>
+                    <li><a href="#"><img class="footer__social-icon" src="img/icons/social-youtube.svg" alt="">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

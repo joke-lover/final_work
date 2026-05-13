@@ -1,0 +1,90 @@
+/* success.css
+   Локальные стили страницы success. */
+
+/* Градиент помогает держать читаемый заголовок поверх фото. */
+.success-hero {
+    position: relative;
+    aspect-ratio: 16 / 6;
+    overflow: hidden;
+    background: var(--color-olive);
+}
+
+.success-hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.success-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(20,24,16,0.5) 0%, rgba(20,24,16,0.15) 60%, rgba(20,24,16,0) 100%);
+}
+
+.success-hero .container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.success-hero__title {
+    font-family: var(--font-display);
+    color: var(--color-stone);
+    font-size: clamp(28px, 3.4vw, 44px);
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Здесь только текстовый стиль, сетку держит Bootstrap. */
+.info-text {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--color-ink);
+}
+
+.info-text strong { font-weight: 600; }
+
+/* Тут только внешний вид карточек, колонки остаются bootstrap-овыми. */
+.next-row {
+    margin-bottom: 96px;
+}
+
+.next-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    border-radius: 14px;
+    overflow: hidden;
+    color: var(--color-ink);
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(42, 47, 34, 0.10);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.next-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(42, 47, 34, 0.15);
+}
+
+.next-card__img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    display: block;
+}
+
+.next-card__label {
+    padding: 26px 24px;
+    text-align: center;
+    font-family: var(--font-display);
+    font-size: 20px;
+    line-height: 1.3;
+}

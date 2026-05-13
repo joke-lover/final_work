@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо за заказ — питомник «Корень»</title>
+    <meta name="description" content="Заказ оформлен. Подробности отправили на почту. Можно перейти к энциклопедии ухода или собрать новую композицию.">
+
+    <!-- Bootstrap оставлен: success-экран по ТЗ на нём. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Общие шрифты и стили сайта. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Локальные стили страницы success. -->
+    <link rel="stylesheet" href="css/success.css">
+</head>
+<body>
+
+<!-- Общая шапка сайта. -->
+<header class="header">
+    <div class="container">
+        <div class="header__top">
+            <a href="index.html" class="header__logo" aria-label="На главную">КОРЕНЬ</a>
+
+            <label class="header__search">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" width="18" height="18">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="m21 21-4.3-4.3" stroke-linecap="round"/>
+                </svg>
+                <input type="search" placeholder="Поиск растений, статей, инструментов…" aria-label="Поиск по сайту">
+            </label>
+
+            <div class="header__actions">
+                <a href="#" class="icon-btn" aria-label="Личный кабинет"><img src="img/icons/account.svg" alt="" aria-hidden="true"></a>
+                <a href="#" class="icon-btn" aria-label="Избранное"><img src="img/icons/favorites.svg" alt="" aria-hidden="true"></a>
+                <a href="#" class="icon-btn" aria-label="Корзина"><img src="img/icons/cart.svg" alt="" aria-hidden="true"></a>
+            </div>
+        </div>
+
+        <nav class="header__nav" aria-label="Главное меню">
+            <a href="plants.html">Растения</a>
+            <a href="#">Конструктор</a>
+            <a href="#">Инструменты</a>
+            <a href="#">Раздел знаний</a>
+            <a href="#">Команда Корня</a>
+            <a href="#">Доставка и оплата</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero-блок страницы. -->
+<section class="success-hero">
+    <img class="success-hero__bg" src="img/hero/success-hero.jpg" alt="">
+    <div class="container">
+        <h1 class="success-hero__title">
+            РАСТЕНИЯ ДЛЯ ВАШЕГО САДА<br>
+            УЖЕ В ПУТИ
+        </h1>
+    </div>
+</section>
+
+<!-- Инфоблок остаётся на Bootstrap-сетке. -->
+<section class="py-5">
+    <div class="container">
+        <div class="row align-items-start gy-3">
+            <div class="col-md-7">
+                <p class="info-text mb-0">
+                    Пока за окном шумит весенний дождь, а ваш чай заваривается,
+                    вы можете заглянуть в личный кабинет, чтобы узнать,
+                    как продвигается путь ваших растений к новому дому.
+                </p>
+            </div>
+            <div class="col-md-5 text-md-end">
+                <p class="info-text mb-0">
+                    Все детали отправили на почту:<br>
+                    <strong>joe***@gmail.com</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Эти карточки тоже собраны на Bootstrap-колонках. -->
+<section class="section pb-0">
+    <div class="container">
+        <h2 class="section__title section__title--center"><span>ЧЕМ ЗАЙМЁМСЯ ДАЛЬШЕ?</span></h2>
+
+        <div class="row g-4 next-row">
+            <div class="col-md-6">
+                <a href="#" class="next-card">
+                    <img class="next-card__img" src="img/success/care.jpg" alt="">
+                    <div class="next-card__label">Энциклопедия по уходу за растениями</div>
+                </a>
+            </div>
+            <div class="col-md-6">
+                <a href="#" class="next-card">
+                    <img class="next-card__img" src="img/success/composition.jpg" alt="">
+                    <div class="next-card__label">Собрать новую композицию</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Общий подвал. -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__cols">
+            <div class="footer__col">
+                <div class="footer__col-title">К прочтению:</div>
+                <ul>
+                    <li><a href="#">Уход за растениями</a></li>
+                    <li><a href="#">Календарь обработок</a></li>
+                    <li><a href="#">Все о почвах</a></li>
+                    <li><a href="#">Энциклопедия вредителей</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <div class="footer__col-title">Инфо:</div>
+                <ul>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <div class="footer__col-title">Садовый бэкстейдж:</div>
+                <ul class="footer__social">
+                    <li><a href="#"><img class="footer__social-icon" src="img/icons/social-pinterest.svg" alt="">Pinterest</a></li>
+                    <li><a href="#"><img class="footer__social-icon" src="img/icons/social-telegram.svg" alt="">Telegram</a></li>
+                    <li><a href="#"><img class="footer__social-icon" src="img/icons/social-youtube.svg" alt="">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
