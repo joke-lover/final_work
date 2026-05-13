@@ -306,8 +306,8 @@ h1, h2, h3, h4 {
 .section__title--center {
     text-align: center;
     max-width: none;
-    /* Отступы здесь уже выровнены визуально. */
-    margin: -64px auto 128px;
+    /* Держим заголовок в обычном потоке, чтобы отступы сверху и снизу считались предсказуемо. */
+    margin: 0 auto 72px;
     font-size: 20px;
     font-weight: 500;
 }
@@ -337,6 +337,11 @@ h1, h2, h3, h4 {
 
 /* Карточки товаров. */
 .bloom-now { background: var(--color-bg); }
+
+/* На главной между лентой карточек и конструктором нужен более плотный стык. */
+.bloom-now + .section--compact {
+    padding-top: 24px;
+}
 
 /* Вместо переноса здесь горизонтальный скролл. */
 .cards {
@@ -572,7 +577,11 @@ h1, h2, h3, h4 {
 }
 
 /* Сетка идей собрана вручную через Grid. */
-.ideas { background: var(--color-bg); }
+.ideas {
+    background: var(--color-bg);
+    padding-top: 48px;
+    padding-bottom: 40px;
+}
 
 .section__lead {
     text-align: center;
@@ -581,6 +590,18 @@ h1, h2, h3, h4 {
     line-height: 1.5;
     max-width: 720px;
     margin: -28px auto 48px;
+}
+
+.ideas__title {
+    margin-bottom: 12px;
+}
+
+.ideas__lead {
+    max-width: 1240px;
+    margin: 0 auto 64px;
+    font-size: clamp(18px, 2vw, 28px);
+    line-height: 1.25;
+    color: var(--color-ink);
 }
 
 .ideas__grid {
@@ -615,7 +636,11 @@ h1, h2, h3, h4 {
 .ideas__item:hover img { transform: scale(1.06); }
 
 /* Простая лента с фото садов. */
-.gardens { background: var(--color-bg); }
+.gardens {
+    background: var(--color-bg);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
 .gardens__strip {
     display: flex;
@@ -657,7 +682,10 @@ h1, h2, h3, h4 {
 .gardens__strip { scrollbar-width: thin; scrollbar-color: var(--color-olive) var(--color-line); }
 
 /* Блок про процесс работы. */
-.how { background: var(--color-bg); }
+.how {
+    background: var(--color-bg);
+    padding-top: 40px;
+}
 
 .how__list {
     display: flex;
