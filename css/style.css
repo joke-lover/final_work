@@ -317,7 +317,7 @@ h1, h2, h3, h4 {
 }
 
 .section__title {
-    font-size: clamp(34px, 4vw, 52px);
+    font-size: 24px;
     line-height: 1.1;
     max-width: 640px;
 }
@@ -374,7 +374,7 @@ h1, h2, h3, h4 {
 .section-title-block__lead.section__lead {
     max-width: 1240px;
     margin: 12px auto 0;
-    font-size: clamp(18px, 2vw, 28px);
+    font-size: 24px;
     line-height: 1.25;
     color: var(--color-ink);
 }

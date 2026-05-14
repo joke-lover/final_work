@@ -4,7 +4,7 @@
 /* Градиент помогает держать читаемый заголовок поверх фото. */
 .success-hero {
     position: relative;
-    aspect-ratio: 16 / 6;
+    height: 388px;
     overflow: hidden;
     background: var(--color-olive);
 }
@@ -18,48 +18,28 @@
     display: block;
 }
 
-.success-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, rgba(20,24,16,0.5) 0%, rgba(20,24,16,0.15) 60%, rgba(20,24,16,0) 100%);
-}
-
 .success-hero .container {
     position: relative;
     z-index: 2;
     height: 100%;
-    display: flex;
-    align-items: center;
 }
 
 .success-hero__title {
     font-family: var(--font-display);
-    color: var(--color-stone);
-    font-size: clamp(28px, 3.4vw, 44px);
+    color: #D9DDE0;
+    font-size: 32px;
     font-weight: 500;
-    letter-spacing: 0.18em;
+    letter-spacing: 0;
     line-height: 1.4;
     margin: 0;
-}
-
-/* Здесь только текстовый стиль, сетку держит Bootstrap. */
-.info-text {
-    font-size: 17px;
-    line-height: 1.6;
-    color: var(--color-ink);
-}
-
-.info-text strong { font-weight: 600; }
-
-/* Тут только внешний вид карточек, колонки остаются bootstrap-овыми. */
-.next-row {
-    margin-bottom: 96px;
 }
 
 .next-card {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 670px;
+    height: 330px;
     background: var(--color-white);
     border-radius: 14px;
     overflow: hidden;
@@ -76,13 +56,17 @@
 
 .next-card__img {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    height: 248px;
     object-fit: cover;
     display: block;
 }
 
 .next-card__label {
-    padding: 26px 24px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 24px;
     text-align: center;
     font-family: var(--font-display);
     font-size: 20px;
