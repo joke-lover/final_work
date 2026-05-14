@@ -46,6 +46,22 @@
             height: '8 - 15 см',
             price:  '350 ₽',
         },
+        {
+            img:    'img/plants/grey_spirea.jpg',
+            name:   'Спирея Серая | Grefsheim',
+            period: 'май - июнь',
+            light:  'свет / полутень',
+            height: '1,5 - 2 м',
+            price:  '850 ₽',
+        },
+        {
+            img:    'img/plants/lilac.jpg',
+            name:   'Сирень | Красавица Москвы',
+            period: 'май - июнь',
+            light:  'свет',
+            height: '3 - 4 м',
+            price:  '670 ₽',
+        },
     ];
 
     /* Один шаблон для обеих подборок с карточками. */

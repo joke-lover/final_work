@@ -173,18 +173,21 @@ h1, h2, h3, h4 {
     object-fit: contain;
 }
 
-/* Нижний ряд навигации. */
+/* Нижний ряд навигации: равные колонки как при width:100% во flex,
+   но сами ссылки по ширине текста — подчёркивание не тянется на всю ячейку. */
 .header__nav {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     align-items: center;
-    gap: 46px;
+    column-gap: 46px;
     border-top: 1px solid transparent;
     height: 30px;
     margin-bottom: 30px;
 }
 
 .header__nav a {
-    width: 100%;
+    width: fit-content;
+    justify-self: start;
     font-family: var(--font-display);
     font-size: 24px;
     font-weight: 500;
@@ -267,7 +270,7 @@ h1, h2, h3, h4 {
 }
 
 .hero__title em {
-    font-style: italic;
+    font-style: normal;
     color: var(--color-stone);
 }
 
@@ -566,7 +569,7 @@ h1, h2, h3, h4 {
 
 .constructor__overlay {
     position: absolute;
-    top: 65%;
+    top: 59%;
     left: 3%;
     transform: translateY(-50%);
     background: var(--color-white);
