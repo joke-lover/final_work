@@ -195,7 +195,7 @@ h1, h2, h3, h4 {
 }
 
 .header__nav a:hover {
-    border-bottom-color: var(--color-olive);
+    border-color: var(--color-olive);
     color: var(--color-olive);
 }
 
@@ -215,7 +215,7 @@ h1, h2, h3, h4 {
     background-image:url('../img/hero/hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center -100px;
 }
 
 .hero__image::after {
@@ -283,9 +283,7 @@ h1, h2, h3, h4 {
 }
 
 .hero__btn:hover {
-    background: var(--color-white);
-    color: var(--color-olive);
-    transform: translateX(4px);
+    color: #FFFFFF;
 }
 
 .hero__btn:active { transform: translateX(2px) scale(0.98); }
@@ -584,6 +582,7 @@ h1, h2, h3, h4 {
 }
 
 .constructor__btn {
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 16px;
@@ -591,13 +590,31 @@ h1, h2, h3, h4 {
     font-family: var(--font-display);
     font-size: 36px;
     font-weight: 500;
-    padding: 4px 0;
+    padding: 4px 0 12px;
     transition: gap var(--transition), color var(--transition);
+}
+
+.constructor__btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.35s ease;
 }
 
 .constructor__btn:hover {
     color: var(--color-olive);
     gap: 18px;
+}
+
+.constructor__btn:hover::after,
+.constructor__btn:focus-visible::after {
+    transform: scaleX(1);
 }
 
 .constructor__btn svg {
@@ -802,10 +819,17 @@ h1, h2, h3, h4 {
 .footer__col a {
     color: var(--color-ink);
     font-size: 24px;
-    transition: opacity var(--transition);
+    text-decoration: none;
+    text-underline-offset: 0.12em;
+    text-decoration-thickness: 1px;
+    transition: opacity var(--transition), text-decoration-color var(--transition);
 }
 
-.footer__col a:hover { opacity: 0.7; }
+.footer__col a:hover,
+.footer__col a:focus-visible {
+    opacity: 0.7;
+    text-decoration: underline;
+}
 
 /* Соцсети идут в строку с иконкой. */
 .footer__social a {
