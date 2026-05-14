@@ -33,12 +33,9 @@
                 </svg>
                 <input type="search" placeholder="Поиск растений, статей, инструментов…" aria-label="Поиск по сайту">
             </label>
-
-            <div class="header__actions">
-                <a href="#" class="icon-btn" aria-label="Личный кабинет"><img src="img/icons/account.svg" alt="" aria-hidden="true"></a>
-                <a href="#" class="icon-btn" aria-label="Избранное"><img src="img/icons/favorites.svg" alt="" aria-hidden="true"></a>
-                <a href="#" class="icon-btn" aria-label="Корзина"><img src="img/icons/cart.svg" alt="" aria-hidden="true"></a>
-            </div>
+            <a href="#" class="icon-btn" aria-label="Личный кабинет"><img src="img/icons/account.svg" alt="" aria-hidden="true"></a>
+            <a href="#" class="icon-btn" aria-label="Избранное"><img src="img/icons/favorites.svg" alt="" aria-hidden="true"></a>
+            <a href="#" class="icon-btn" aria-label="Корзина"><img src="img/icons/cart.svg" alt="" aria-hidden="true"></a>
         </div>
 
         <nav class="header__nav" aria-label="Главное меню">
@@ -56,26 +53,30 @@
 <section class="success-hero">
     <img class="success-hero__bg" src="img/hero/success-hero.jpg" alt="">
     <div class="container">
-        <h1 class="success-hero__title">
-            РАСТЕНИЯ ДЛЯ ВАШЕГО САДА<br>
-            УЖЕ В ПУТИ
-        </h1>
+        <div class="row h-100 align-items-center">
+            <div class="col-12 col-lg-7">
+                <h1 class="success-hero__title">
+                    РАСТЕНИЯ ДЛЯ ВАШЕГО САДА<br>
+                    УЖЕ В ПУТИ
+                </h1>
+            </div>
+        </div>
     </div>
 </section>
 
 <!-- Инфоблок остаётся на Bootstrap-сетке. -->
-<section class="py-5">
-    <div class="container">
-        <div class="row align-items-start gy-3">
-            <div class="col-md-7">
-                <p class="info-text mb-0">
+<section class="success-info py-4">
+    <div class="container container-compact">
+        <div class="row success-info__row align-items-start justify-content-between gy-3">
+            <div class="col-12 col-lg-8">
+                <p class="fs-4 lh-base mb-0">
                     Пока за окном шумит весенний дождь, а ваш чай заваривается,
                     вы можете заглянуть в личный кабинет, чтобы узнать,
                     как продвигается путь ваших растений к новому дому.
                 </p>
             </div>
-            <div class="col-md-5 text-md-end">
-                <p class="info-text mb-0">
+            <div class="col-12 col-lg-auto ms-lg-auto text-lg-end">
+                <p class="fs-4 lh-base mb-0">
                     Все детали отправили на почту:<br>
                     <strong>joe***@gmail.com</strong>
                 </p>
@@ -85,18 +86,18 @@
 </section>
 
 <!-- Эти карточки тоже собраны на Bootstrap-колонках. -->
-<section class="section pb-0">
-    <div class="container">
-        <h2 class="section__title section__title--center"><span>ЧЕМ ЗАЙМЁМСЯ ДАЛЬШЕ?</span></h2>
+<section class="section pb-0 success-next">
+    <div class="container container-compact">
+        <h2 class="section__title section__title--center success-next__title"><span>ЧЕМ ЗАЙМЁМСЯ ДАЛЬШЕ?</span></h2>
 
-        <div class="row g-4 next-row">
-            <div class="col-md-6">
+        <div class="row g-4 justify-content-center next-row">
+            <div class="col-md-6 d-flex justify-content-center">
                 <a href="#" class="next-card">
                     <img class="next-card__img" src="img/success/care.jpg" alt="">
                     <div class="next-card__label">Энциклопедия по уходу за растениями</div>
                 </a>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 d-flex justify-content-center">
                 <a href="#" class="next-card">
                     <img class="next-card__img" src="img/success/composition.jpg" alt="">
                     <div class="next-card__label">Собрать новую композицию</div>
