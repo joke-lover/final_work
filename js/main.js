@@ -122,6 +122,9 @@
         { img: 'img/gardens/anna-garden.jpg',    alt: 'Сад в Сестрорецке' },
         { img: 'img/gardens/mikhail-garden.jpg', alt: 'Сад во Всеволожске' },
         { img: 'img/gardens/olga-garden.jpg',    alt: 'Сад в Парголово' },
+        { img: 'img/gardens/anna-garden.jpg',    alt: 'Сад в Сестрорецке' },
+        { img: 'img/gardens/mikhail-garden.jpg', alt: 'Сад во Всеволожске' },
+        { img: 'img/gardens/olga-garden.jpg',    alt: 'Сад в Парголово' },
     ];
 
     /* Полоса садов рендерится отдельно, чтобы не дублировать HTML. */

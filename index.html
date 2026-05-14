@@ -23,24 +23,21 @@
             <a href="index.html" class="header__logo" aria-label="На главную">КОРЕНЬ</a>
 
             <label class="header__search">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" width="18" height="18">
+                <input type="search" aria-label="Поиск по сайту">
+                <svg class="header__search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" width="18" height="18">
                     <circle cx="11" cy="11" r="7"/>
                     <path d="m21 21-4.3-4.3" stroke-linecap="round"/>
                 </svg>
-                <input type="search" placeholder="Поиск растений, статей, инструментов…" aria-label="Поиск по сайту">
             </label>
-
-            <div class="header__actions">
-                <a href="#" class="icon-btn" aria-label="Личный кабинет">
-                    <img src="img/icons/account.svg" alt="" aria-hidden="true">
-                </a>
-                <a href="#" class="icon-btn" aria-label="Избранное">
-                    <img src="img/icons/favorites.svg" alt="" aria-hidden="true">
-                </a>
-                <a href="#" class="icon-btn" aria-label="Корзина">
-                    <img src="img/icons/cart.svg" alt="" aria-hidden="true">
-                </a>
-            </div>
+            <a href="#" class="icon-btn" aria-label="Личный кабинет">
+                <img src="img/icons/account.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="#" class="icon-btn" aria-label="Избранное">
+                <img src="img/icons/favorites.svg" alt="" aria-hidden="true">
+            </a>
+            <a href="#" class="icon-btn" aria-label="Корзина">
+                <img src="img/icons/cart.svg" alt="" aria-hidden="true">
+            </a>
         </div>
 
         <nav class="header__nav" aria-label="Главное меню">
@@ -57,31 +54,37 @@
 
 <!-- Главный статичный баннер. -->
 <section class="hero" aria-label="Главный экран">
-    <div class="hero__image" style="background-image:url('img/hero/hero.jpg');"></div>
+    <div class="hero__image"></div>
 
     <div class="hero__content">
-        <h1 class="hero__title">Сад начинается <em>здесь</em></h1>
-        <a href="#bloom" class="hero__btn">
-            К растениям
-            <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </a>
+        <div class="hero__copy">
+            <h1 class="hero__title">Сад начинается <em>здесь</em></h1>
+            <a href="#bloom" class="hero__btn">
+                К растениям
+                <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                    <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
     </div>
 </section>
 
 <!-- Карточки сюда рендерит JS. -->
 <section class="section bloom-now" id="bloom">
     <div class="container">
-        <h2 class="section__title section__title--center"><span>ЦВЕТЕТ СЕЙЧАС</span></h2>
+        <div class="section-title-block">
+            <h2 class="section__title section__title--center section-title-block__title"><span>ЦВЕТЕТ СЕЙЧАС</span></h2>
+        </div>
         <div class="cards" id="bloomNow"></div>
     </div>
 </section>
 
 <!-- Промо-блок конструктора. -->
 <section class="section section--compact">
-    <div class="container">
-        <h2 class="section__title section__title--center"><span>СОБЕРИ СВОЮ КЛУМБУ ЗА НЕСКОЛЬКО МИНУТ</span></h2>
+    <div class="container-compact">
+        <div class="section-title-block">
+            <h2 class="section__title section__title--center section-title-block__title"><span>СОБЕРИ СВОЮ КЛУМБУ ЗА НЕСКОЛЬКО МИНУТ</span></h2>
+        </div>
 
         <div class="constructor">
             <img class="constructor__bg" src="img/ideas/constructor-illustration.png" alt="">
@@ -101,9 +104,11 @@
 
 <!-- Сетка идей собрана вручную в HTML. -->
 <section class="section ideas">
-    <div class="container">
-        <h2 class="section__title section__title--center ideas__title"><span>СКУЧАЕТЕ ПО ОЖИВЛЕННОМУ САДУ?</span></h2>
-        <p class="section__lead ideas__lead">Скоро он вновь наполнится запахами и красками, а это значит — пора планировать сезон.</p>
+    <div class="container-compact">
+        <div class="section-title-block section-title-block--with-lead">
+            <h2 class="section__title section__title--center section-title-block__title"><span>СКУЧАЕТЕ ПО ОЖИВЛЕННОМУ САДУ?</span></h2>
+            <p class="section__lead section-title-block__lead">Скоро он вновь наполнится запахами и красками, а это значит - пора планировать сезон.</p>
+        </div>
 
         <div class="ideas__grid">
             <a href="#" class="ideas__item">
@@ -143,36 +148,46 @@
 <!-- Лента садов рендерится из JS. -->
 <section class="section gardens">
     <div class="container">
-        <h2 class="section__title section__title--center"><span>САДЫ НАШИХ ПОЛЬЗОВАТЕЛЕЙ</span></h2>
+        <div class="section-title-block">
+            <h2 class="section__title section__title--center section-title-block__title"><span>САДЫ НАШИХ ПОЛЬЗОВАТЕЛЕЙ</span></h2>
+        </div>
         <div class="gardens__strip" id="gardensList"></div>
     </div>
 </section>
 
 <!-- Статичный блок о процессе работы. -->
 <section class="section how">
-    <div class="container">
-        <h2 class="section__title section__title--center"><span>КАК МЫ РАБОТАЕМ</span></h2>
+    <div class="container-compact">
+        <div class="section-title-block">
+            <h2 class="section__title section__title--center section-title-block__title"><span>КАК МЫ РАБОТАЕМ</span></h2>
+        </div>
 
         <div class="how__list">
             <article class="how__item">
                 <div class="how__icon">
                     <img src="img/icons/how-nursery.svg" alt="">
                 </div>
-                <p class="how__text">Выращиваем посадочный материал в собственном питомнике, что гарантирует соответствие климату</p>
+                <div class="how__text-box">
+                    <p class="how__text">Выращиваем посадочный материал в собственном питомнике, что гарантирует соответствие климату</p>
+                </div>
             </article>
 
             <article class="how__item">
                 <div class="how__icon">
                     <img src="img/icons/how-experts.svg" alt="">
                 </div>
-                <p class="how__text">Дендрологи и биологи изучают растения, совершенствуя рекомендации по уходу и пишут об этом статьи</p>
+                <div class="how__text-box">
+                    <p class="how__text">Дендрологи и биологи изучают растения, совершенствуя рекомендации по уходу и пишут об этом статьи</p>
+                </div>
             </article>
 
             <article class="how__item">
                 <div class="how__icon">
                     <img src="img/icons/how-design.svg" alt="">
                 </div>
-                <p class="how__text">Дизайнеры подбирают сочетания, которые держатся весь сезон</p>
+                <div class="how__text-box">
+                    <p class="how__text">Дизайнеры подбирают сочетания, которые держатся весь сезон</p>
+                </div>
             </article>
         </div>
     </div>
@@ -189,7 +204,7 @@
 
 <!-- Общий подвал. -->
 <footer class="footer">
-    <div class="container">
+    <div class="container-compact">
         <div class="footer__cols">
             <div class="footer__col">
                 <div class="footer__col-title">К прочтению:</div>
