@@ -39,12 +39,12 @@
             price:  '320 ₽',
         },
         {
-            img:    'img/plants/landysh.jpg',
-            name:   'Ландыш майский',
-            period: 'май',
-            light:  'полутень / тень / свет',
-            height: '20 см',
-            price:  '320 ₽',
+            img:    'img/plants/crocus.png',
+            name:   'Крокус | Jeanne d’Arc',
+            period: 'март - апрель',
+            light:  'свет / полутень',
+            height: '8 - 15 см',
+            price:  '350 ₽',
         },
     ];
 
