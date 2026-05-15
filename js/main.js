@@ -135,21 +135,59 @@
 
     /* Фото для полосы с садами пользователей. */
     const gardensList = [
-        { img: 'img/gardens/anna-garden.jpg',    alt: 'Сад в Сестрорецке' },
-        { img: 'img/gardens/mikhail-garden.jpg', alt: 'Сад во Всеволожске' },
-        { img: 'img/gardens/olga-garden.jpg',    alt: 'Сад в Парголово' },
-        { img: 'img/gardens/anna-garden.jpg',    alt: 'Сад в Сестрорецке' },
-        { img: 'img/gardens/mikhail-garden.jpg', alt: 'Сад во Всеволожске' },
-        { img: 'img/gardens/olga-garden.jpg',    alt: 'Сад в Парголово' },
+        {
+            img: 'img/gardens/anna-garden.jpg',
+            alt: 'Сад в Сестрорецке',
+            name: 'Яктушева Анна',
+            review: 'Сад получился именно таким, о каком мечтаешь долгими зимними вечерами: живым, мягким, наполненным цветом и настроением. Растения из питомника прекрасно прижились, и теперь каждый уголок выглядит продуманным, но совсем не нарочитым. Спасибо за эту красоту, которая с каждым днем становится только лучше.',
+            avatar: 'img/gardens/garden-avatar-1.jpg',
+        },
+        {
+            img: 'img/gardens/mikhail-garden.jpg',
+            alt: 'Сад во Всеволожске',
+            name: 'Бержева Инга',
+            review: 'Покупка растений у вас стала одним из лучших решений для нашего сада. Все прижилось превосходно, растения выглядят здоровыми, выразительными и уже создают ту самую атмосферу ухоженного, зрелого сада. Спасибо за качество, которому действительно хочется доверять.',
+            avatar: 'img/gardens/garden-avatar-2.jpg',
+        },
+        {
+            img: 'img/gardens/olga-garden.jpg',
+            alt: 'Сад в Парголово',
+            name: 'Кинчев Георгий',
+            review: 'Мне хотелось, чтобы сад выглядел естественно и благородно, будто он всегда был здесь. Так и вышло. Растения прижились чудесно, выросли сильными и гармонично сложились в очень красивое пространство. Спасибо питомнику за качество, вкус и то редкое чувство, когда результат оказывается даже лучше ожиданий.',
+            avatar: 'img/gardens/garden-avatar-3.jpg',
+        },
+        {
+            img: 'img/gardens/nona-garden.jpg',
+            alt: 'Сад в Сестрорецке',
+            name: 'Бажевская Нона',
+            review: 'С тех пор как в саду появились ваши растения, он словно обрел собственный голос. Все выглядит удивительно цельно, спокойно и по-настоящему красиво. Очень благодарна питомнику за прекрасный посадочный материал и за то, что помогли создать место, куда хочется выходить каждое утро с чашкой чая.',
+            avatar: 'img/gardens/garden-avatar-4.jpg',
+        },
+        {
+            img: 'img/gardens/andrey-garden.jpg',
+            alt: 'Сад во Всеволожске',
+            name: 'Климов Андрей',
+            review: 'Теперь у нас не просто участок, а настоящий сад — живой, уютный и очень красивый. Ваши растения прекрасно адаптировались, быстро пошли в рост и удивительно хорошо смотрятся вместе. Спасибо питомнику за внимательный подход и за красоту, которая останется с нами надолго.',
+            avatar: 'img/gardens/garden-avatar-5.jpg',
+        },
     ];
 
     /* Полоса садов рендерится отдельно, чтобы не дублировать HTML. */
     const renderGardens = (container, data) => {
         if (!container) return;
         container.innerHTML = data.map((g) => `
-            <div class="gardens__item">
+            <article class="gardens__item" tabindex="0" aria-label="${g.alt}">
                 <img src="${g.img}" alt="${g.alt}" loading="lazy">
-            </div>
+                <div class="gardens__overlay">
+                    <div class="gardens__avatar-box">
+                        <img class="gardens__avatar" src="${g.avatar}" alt="${g.name}" loading="lazy">
+                    </div>
+                    <div class="gardens__content">
+                        <h3 class="gardens__name">${g.name}</h3>
+                        <p class="gardens__text">${g.review}</p>
+                    </div>
+                </div>
+            </article>
         `).join('');
     };
 
