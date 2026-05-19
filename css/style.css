@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
 /* Общая шапка сайта. */
 .header {
     background: var(--color-white);
-    border-bottom: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-white);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -218,7 +218,7 @@ h1, h2, h3, h4 {
     background-image:url('../img/hero/hero.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center -100px;
+    background-position: center -640px;
 }
 
 .hero__image::after {
@@ -445,36 +445,52 @@ h1, h2, h3, h4 {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: background var(--transition);
     cursor: pointer;
 }
 
 .card__fav  { top: 16px;    right: 16px; }
 .card__cart { bottom: 16px; right: 16px; }
 
-.card__fav img,
-.card__cart img {
-    width: 70px;
-    height: 70px;
-    object-fit: contain;
+.card__fav-icon,
+.card__cart-icon {
     display: block;
-    transition: filter var(--transition);
+    width: 80px;
+    height: auto;
+    flex-shrink: 0
 }
 
-/* Активное состояние у кнопок одинаковое. */
-.card__fav:hover,
-.card__cart:hover,
-.card__fav.is-active {
-    background: var(--color-olive);
+.card__cart-icon {
+    transform: translateX(-8px);
 }
 
-.card__fav:hover img,
-.card__cart:hover img,
-.card__fav.is-active img {
-    filter: brightness(0) invert(1);
+.card__fav-icon path {
+    fill: none;
+    stroke: #231F20;
+    transition: fill var(--transition), stroke var(--transition);
 }
 
-.card__cart:active { transform: scale(0.94); }
+.card__fav:hover:not(.is-active) .card__fav-icon path {
+    stroke: #E21A1A;
+}
+
+.card__fav.is-active .card__fav-icon path {
+    fill: #E21A1A;
+    stroke: none;
+}
+
+.card__cart-icon path {
+    fill: none;
+    stroke: #231F20;
+    transition: stroke var(--transition);
+}
+
+.card__cart:hover:not(:active) .card__cart-icon path {
+    stroke: #72A731;
+}
+
+.card__cart:active .card__cart-icon path {
+    stroke: #919191;
+}
 
 /* Текстовый блок карточки */
 .card__body {
