@@ -670,7 +670,7 @@ h1, h2, h3, h4 {
 .ideas__item--tall {
     grid-column: span 2;
     grid-row: span 2;
-    aspect-ratio: auto;
+    aspect-ratio: 1 / 1;
 }
 
 .ideas__item img {
